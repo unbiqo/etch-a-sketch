@@ -1,11 +1,13 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;           /* full viewport width */
     height: 400px;
 }
 
 .cell {
+    flex: 0 0 calc(100% / 16);
     background-color: green;
+    box-sizing: border-box;
     border: 1px solid #ccc;
 }
